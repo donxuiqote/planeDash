@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plane Dash</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgba(0,0,0,0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            color: rgb(255, 255, 255, 255);;
+            background-image: url('space1_4-frames.gif');
+            font-family: "Pixelify Sans", sans-serif;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        canvas {
+            display: block;
+            background-image: url('space2_4-frames.gif');
+            background-repeat: repeat;
+            height: 60vh;
+            width: 80vw;
+        }
+        .score {
+            text-align: center;
+            font-size: 2rem;
+            background-color: rgba(175, 148, 148, 0.596);
+        }
+        .heads{
+            margin-top: 20vh;
+            height: 20vh;
+        }
+        .unselectable {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .credit{
+            background-color: rgba(20, 18, 18, 0.774);
+            width: 100%;
+            text-align: center;
+            height: 10vh;
+        }
+
+        p{
+            padding: 1rem;
+        }
+        .p{
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main unselectable">
+        <div class="heads">
+            <div class="p">Plane Dash</div>
+            <div class="score">0</div>
+        </div>
+        <div>
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="credit">
+            <p>Thank you <a href="https://foozlecc.itch.io/">FOOZLE</a> and <a href="https://piiixl.itch.io/">PiiiXL</a> for your amazing arts and assets !</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
